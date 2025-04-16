@@ -1,0 +1,27 @@
+[
+
+    {
+        "nomeProduto": "Augusta-Pullover-Jacket",
+        "tamanho": "S",
+        "cor": "Orange",
+        "quantidade": 2
+    },
+    {
+        "nomeProduto": "Aether-Gym-Pant",
+        "tamanho": "34",
+        "cor": "Brown",
+        "quantidade": 1
+    },
+    {
+        "nomeProduto": "Circe-Hooded-Ice-Fleece",
+        "tamanho": "XS",
+        "cor": "Purple",
+        "quantidade": 1
+    },
+    {
+        "nomeProduto": "Eos-V-Neck-Hoodie",
+        "tamanho": "L",
+        "cor": "Green",
+        "quantidade": 2
+    }
+]

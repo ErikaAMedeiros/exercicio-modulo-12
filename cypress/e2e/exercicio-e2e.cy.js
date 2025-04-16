@@ -1,5 +1,7 @@
 /// <reference types="cypress" />
 
+import produtosPage from "../support/page_objects/produtos.page";
+
 context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
   /*  Como cliente 
       Quero acessar a Loja EBAC 
@@ -10,11 +12,16 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
       E validando minha compra ao final */
 
   beforeEach(() => {
-      cy.visit('/')
+    produtosPage.visitarUrl()
+    cy.fixture('perfil').then(login => {
+        cy.login(login.usuario, login.senha)
+    })
+
   });
 
   it('Deve fazer um pedido na loja Ebac Shop de ponta a ponta', () => {
       //TODO: Coloque todo o fluxo de teste aqui, considerando as boas práticas e otimizações
+      produtosPage.addProdutos()
       
   });
 

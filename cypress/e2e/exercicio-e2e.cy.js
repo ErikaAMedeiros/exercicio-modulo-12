@@ -22,6 +22,21 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
   it('Deve fazer um pedido na loja Ebac Shop de ponta a ponta', () => {
       //TODO: Coloque todo o fluxo de teste aqui, considerando as boas práticas e otimizações
       produtosPage.addProdutos()
+      produtosPage.acessarCarrinho()
+      cy.detalhesCheckout(
+        'Érika', 
+        'Medeiros', 
+        'Rua Irmão Fernando', 
+        'Pelotas', 
+        '96040110', 
+        '53123456789', 
+        'aluno_ebac@teste.com',
+        //Transferência bancário == bacs
+        //Cheque == cheque
+        //Pagamento na entrega == cod
+        'cod',
+      )
+      produtosPage.concluirCompra()
       
   });
 

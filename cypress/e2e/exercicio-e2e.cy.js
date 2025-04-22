@@ -1,6 +1,7 @@
 /// <reference types="cypress" />
 
 import produtosPage from "../support/page_objects/produtos.page";
+import checkoutPages from "../support/page_objects/checkout.pages";
 
 context("Exercicio - Testes End-to-end - Fluxo de pedido", () => {
   /*  Como cliente 
@@ -21,7 +22,7 @@ context("Exercicio - Testes End-to-end - Fluxo de pedido", () => {
   it("Deve fazer um pedido na loja Ebac Shop de ponta a ponta", () => {
     //TODO: Coloque todo o fluxo de teste aqui, considerando as boas práticas e otimizações
     produtosPage.addProdutos();
-    produtosPage.acessarCarrinho();
+    checkoutPages.acessarCarrinho();
     cy.detalhesCheckout(
       "Érika",
       "Medeiros",
@@ -35,6 +36,6 @@ context("Exercicio - Testes End-to-end - Fluxo de pedido", () => {
         Pagamento na entrega == cod */
       "cod"
     );
-    produtosPage.concluirCompra();
+    checkoutPages.concluirCompra();
   });
 });

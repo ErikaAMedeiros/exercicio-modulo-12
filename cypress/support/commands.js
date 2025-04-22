@@ -9,6 +9,7 @@ Cypress.Commands.add("login", (usuario, senha) => {
 Cypress.Commands.add("selecionarProduto1", () => {
   cy.fixture("produtos").then((dados) => {
     produtosPage.visitarProduto(dados[0].nomeProduto);
+    cy.get(".product_title").should("exist");
     produtosPage.addProdutoCarrinho(
       dados[0].tamanho,
       dados[0].cor,
@@ -20,6 +21,7 @@ Cypress.Commands.add("selecionarProduto1", () => {
 Cypress.Commands.add("selecionarProduto2", () => {
   cy.fixture("produtos").then((dados) => {
     produtosPage.visitarProduto(dados[1].nomeProduto);
+    cy.get(".product_title").should("exist");
     produtosPage.addProdutoCarrinho(
       dados[1].tamanho,
       dados[1].cor,
@@ -31,6 +33,7 @@ Cypress.Commands.add("selecionarProduto2", () => {
 Cypress.Commands.add("selecionarProduto3", () => {
   cy.fixture("produtos").then((dados) => {
     produtosPage.visitarProduto(dados[2].nomeProduto);
+    cy.get(".product_title").should("exist");
     produtosPage.addProdutoCarrinho(
       dados[2].tamanho,
       dados[2].cor,
@@ -42,6 +45,7 @@ Cypress.Commands.add("selecionarProduto3", () => {
 Cypress.Commands.add("selecionarProduto4", () => {
   cy.fixture("produtos").then((dados) => {
     produtosPage.visitarProduto(dados[3].nomeProduto);
+    cy.get(".product_title").should("exist");
     produtosPage.addProdutoCarrinho(
       dados[3].tamanho,
       dados[3].cor,
